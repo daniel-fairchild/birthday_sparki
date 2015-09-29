@@ -1,9 +1,7 @@
-
 #include <Sparki.h>  // include the robot library
 #include "pitches.h" // include a list of pitches
-#include "bcake.h" // include a list of pitches
-#include "melody.h" // include a list of pitches
-
+#include "bcake.h"  //  birthday cake bitmap in byte array
+#include "melody.h" //  the tune to play
 
 // /------^-----\
 // |            |
