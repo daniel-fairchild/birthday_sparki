@@ -66,7 +66,6 @@ void play_tune(){
 
 void setup() {
   sparki.servo(SERVO_CENTER); // center the servo
-//  draw_cake();
 }
 
 
@@ -152,7 +151,7 @@ void loop() {
 
   if (should_play != 0){
     if (should_play == 1){
-//      play_tune();
+      play_tune();
       draw_cake();
       should_play = -1;
     }
