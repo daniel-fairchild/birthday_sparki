@@ -50,7 +50,7 @@ const note_t melody[]  = {
     {NOTE_A4, 4, NULL},
     {NOTE_C5, 4, NULL},
     {NOTE_AS4, 4, NULL},
-    {NOTE_G4, 4, "med kage til"},
+    {NOTE_G4, 4, "og kage til!"},
     {NOTE_F4, 2, NULL},
     {NOTE_E4, 2, NULL},
     {NOTE_F4, 2, NULL},

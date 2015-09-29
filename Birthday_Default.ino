@@ -21,17 +21,17 @@ int should_play = 0;
 
 void draw_cake(){
   sparki.clearLCD();
-//  for(int y = 0; y < 58; y++){
-//    for(int x = 0; x < 8; x++){
-//      prog_uchar cb = pgm_read_byte_near( bcake + (y<<3)+x);
-//      for(int i = 0; i < 8; i++){
-//        if ((cb & (1<<i)) > 0){
-//          sparki.drawPixel(31+(x<<3) + i, 3+y);
-//        }
-//      }
-//    }
-//  }
-  sparki.drawBitmap(31, 3, bcake, 64, 58);
+  for(int y = 0; y < 58; y++){
+    for(int x = 0; x < 8; x++){
+      prog_uchar cb = pgm_read_byte_near( bcake + (y<<3)+x);
+      for(int i = 0; i < 8; i++){
+        if ((cb & (1<<i)) > 0){
+          sparki.drawPixel(31+(x<<3) + i, 3+y);
+        }
+      }
+    }
+  }
+//  sparki.drawBitmap(31, 3, bcake, 64, 58);
   sparki.updateLCD();
 }
 
@@ -53,7 +53,7 @@ void play_tune(){
     // calculate the note duration as 1 second divided by note type.
     //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
     int noteDuration = pitch/melody[thisNote].duration;
-//    sparki.beep(melody[thisNote].pitch, noteDuration);
+    sparki.beep(melody[thisNote].pitch, noteDuration);
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
     int pauseBetweenNotes = noteDuration * 1.30;
