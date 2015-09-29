@@ -3,7 +3,7 @@ Sketch for making arduino Sparki robot play a tune, wave a flag and display an i
 
 Video example: https://t.co/RDJoJqzYkY
 
-
+<poem>
 /*0123456701234567012345670123456701234567012345670123456701234567
 |----------------------------------------------------------------|
 |                                                                | 0
@@ -71,3 +71,4 @@ Video example: https://t.co/RDJoJqzYkY
 |                                                                | 62
 |                                                                | 63
 |----------------------------------------------------------------|*/
+</poem>
