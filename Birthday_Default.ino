@@ -19,17 +19,17 @@ int should_play = 0;
 
 void draw_cake(){
   sparki.clearLCD();
-  for(int y = 0; y < 58; y++){
+  for(int y = 0; y < 64; y++){
     for(int x = 0; x < 8; x++){
       prog_uchar cb = pgm_read_byte_near( bcake + (y<<3)+x);
       for(int i = 0; i < 8; i++){
-        if ((cb & (1<<i)) > 0){
-          sparki.drawPixel(31+(x<<3) + i, 3+y);
+        if ((cb & (1<<(7-i)))){
+          sparki.drawPixel(31+(x<<3) + i, y);
         }
       }
     }
   }
-//  sparki.drawBitmap(31, 3, bcake, 64, 58);
+//  sparki.drawBitmap(31, 0, bcake, 64, 64);
   sparki.updateLCD();
 }
 
@@ -152,10 +152,7 @@ void loop() {
 
   if (should_play != 0){
     if (should_play == 1){
-      play_tune();
-      sparki.clearLCD();
-      sparki.updateLCD(); // 
-
+//      play_tune();
       draw_cake();
       should_play = -1;
     }
