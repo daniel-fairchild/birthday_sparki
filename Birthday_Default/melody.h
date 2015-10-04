@@ -56,7 +56,7 @@ const note_t melody[]  = {
     {NOTE_F4, 2, NULL},
     {NOTE_PAUSE, 32, NULL},
     {NOTE_PAUSE, 2, NULL},
-    {NOTE_PAUSE, 3, NULL},
+    {NOTE_PAUSE, 3, NULL}
   };
  
  

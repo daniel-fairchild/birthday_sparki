@@ -46,7 +46,7 @@ i = 0
 for  y in range(64):
 	for x in range(8):
 		outstr.extend(["0x",format(barray[(y<<3)+x], '02x'), ","])
-	outstr.append("\n")
+	outstr.append("// "+str(y)+"\n")
 outstr.append("};\n")
 
 
